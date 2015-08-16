@@ -90,8 +90,8 @@ sub auth
   return accessLevel('utils');
 }
 
-BobboBot::command::add('manhours', 'run', \&BobboBot::manhours::run);
-BobboBot::command::add('manhours', 'help', \&BobboBot::manhours::help);
-BobboBot::command::add('manhours', 'auth', \&BobboBot::manhours::auth);
+BobboBot::module::add('manhours', 'run', \&BobboBot::manhours::run);
+BobboBot::module::add('manhours', 'help', \&BobboBot::manhours::help);
+BobboBot::module::add('manhours', 'auth', \&BobboBot::manhours::auth);
 
 1;

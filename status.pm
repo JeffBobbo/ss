@@ -160,9 +160,9 @@ sub auth
   return accessLevel('utils');
 }
 
-BobboBot::command::add('status', 'run', \&BobboBot::status::run);
-BobboBot::command::add('status', 'help', \&BobboBot::status::help);
-BobboBot::command::add('status', 'auth', \&BobboBot::status::auth);
-BobboBot::command::addEvent(\&BobboBot::status::autoStatus, 60);
+BobboBot::module::add('status', 'run', \&BobboBot::status::run);
+BobboBot::module::add('status', 'help', \&BobboBot::status::help);
+BobboBot::module::add('status', 'auth', \&BobboBot::status::auth);
+BobboBot::module::addEvent(\&BobboBot::status::autoStatus, 60);
 
 1;

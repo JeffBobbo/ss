@@ -126,8 +126,8 @@ sub auth
   return accessLevel('utils');
 }
 
-BobboBot::command::add('pvp', 'run', \&BobboBot::pvp::run);
-BobboBot::command::add('pvp', 'help', \&BobboBot::pvp::help);
-BobboBot::command::add('pvp', 'auth', \&BobboBot::pvp::auth);
+BobboBot::module::add('pvp', 'run', \&BobboBot::pvp::run);
+BobboBot::module::add('pvp', 'help', \&BobboBot::pvp::help);
+BobboBot::module::add('pvp', 'auth', \&BobboBot::pvp::auth);
 
 1;
