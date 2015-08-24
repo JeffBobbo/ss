@@ -65,8 +65,8 @@ sub auth
   return accessLevel('utils');
 }
 
-BobboBot::module::add('suit', 'run', \&BobboBot::suit::run);
-BobboBot::module::add('suit', 'help', \&BobboBot::suit::help);
-BobboBot::module::add('suit', 'auth', \&BobboBot::suit::auth);
+BobboBot::module::addCommand('suit', 'run', \&BobboBot::suit::run);
+BobboBot::module::addCommand('suit', 'help', \&BobboBot::suit::help);
+BobboBot::module::addCommand('suit', 'auth', \&BobboBot::suit::auth);
 
 1;

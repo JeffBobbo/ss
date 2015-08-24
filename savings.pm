@@ -53,8 +53,8 @@ sub auth
   return accessLevel('utils');
 }
 
-BobboBot::module::add('savings', 'run', \&BobboBot::savings::run);
-BobboBot::module::add('savings', 'help', \&BobboBot::savings::help);
-BobboBot::module::add('savings', 'auth', \&BobboBot::savings::auth);
+BobboBot::module::addCommand('savings', 'run', \&BobboBot::savings::run);
+BobboBot::module::addCommand('savings', 'help', \&BobboBot::savings::help);
+BobboBot::module::addCommand('savings', 'auth', \&BobboBot::savings::auth);
 
 1;

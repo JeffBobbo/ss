@@ -43,8 +43,8 @@ sub auth
   return accessLevel('utils');
 }
 
-BobboBot::module::add('ration', 'run', \&BobboBot::ration::run);
-BobboBot::module::add('ration', 'help', \&BobboBot::ration::help);
-BobboBot::module::add('ration', 'auth', \&BobboBot::ration::auth);
+BobboBot::module::addCommand('ration', 'run', \&BobboBot::ration::run);
+BobboBot::module::addCommand('ration', 'help', \&BobboBot::ration::help);
+BobboBot::module::addCommand('ration', 'auth', \&BobboBot::ration::auth);
 
 1;

@@ -25,8 +25,8 @@ sub auth
   return accessLevel('utils');
 }
 
-BobboBot::module::add('support', 'run', \&BobboBot::support::run);
-BobboBot::module::add('support', 'help', \&BobboBot::support::help);
-BobboBot::module::add('support', 'auth', \&BobboBot::support::auth);
+BobboBot::module::addCommand('support', 'run', \&BobboBot::support::run);
+BobboBot::module::addCommand('support', 'help', \&BobboBot::support::help);
+BobboBot::module::addCommand('support', 'auth', \&BobboBot::support::auth);
 
 1;

@@ -97,8 +97,8 @@ sub auth
   return accessLevel('utils');
 }
 
-BobboBot::module::add('condense', 'run', \&BobboBot::condense::run);
-BobboBot::module::add('condense', 'help', \&BobboBot::condense::help);
-BobboBot::module::add('condense', 'auth', \&BobboBot::condense::auth);
+BobboBot::module::addCommand('condense', 'run', \&BobboBot::condense::run);
+BobboBot::module::addCommand('condense', 'help', \&BobboBot::condense::help);
+BobboBot::module::addCommand('condense', 'auth', \&BobboBot::condense::auth);
 
 1;

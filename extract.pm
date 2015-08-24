@@ -53,8 +53,8 @@ sub auth
   return accessLevel('utils');
 }
 
-BobboBot::module::add('extract', 'run', \&BobboBot::extract::run);
-BobboBot::module::add('extract', 'help', \&BobboBot::extract::help);
-BobboBot::module::add('extract', 'auth', \&BobboBot::extract::auth);
+BobboBot::module::addCommand('extract', 'run', \&BobboBot::extract::run);
+BobboBot::module::addCommand('extract', 'help', \&BobboBot::extract::help);
+BobboBot::module::addCommand('extract', 'auth', \&BobboBot::extract::auth);
 
 1;

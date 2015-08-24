@@ -55,8 +55,8 @@ sub auth
   return accessLevel('normal');
 }
 
-BobboBot::module::add('mod', 'run', \&BobboBot::mod::run);
-BobboBot::module::add('mod', 'help', \&BobboBot::mod::help);
-BobboBot::module::add('mod', 'auth', \&BobboBot::mod::auth);
+BobboBot::module::addCommand('mod', 'run', \&BobboBot::mod::run);
+BobboBot::module::addCommand('mod', 'help', \&BobboBot::mod::help);
+BobboBot::module::addCommand('mod', 'auth', \&BobboBot::mod::auth);
 
 1;
