@@ -12,6 +12,8 @@ sub run
 {
   my $amount = join(' ', @{$_[0]->{arg}});
 
+  $amount =~ s/["']//g; # remove any quotes
+
   if (!defined $amount || $amount eq '')
   {
     return 'No resource abdundance.';
@@ -21,9 +23,9 @@ sub run
   {
     my $ret = 'Possible abdundencies: ';
     $ret .= $resource[0];
-    for (my $i = 0; $i < @resource; $i++)
+    for (my $i = 1; $i < @resource; $i++)
     {
-      $ret .= ', '. $resource[$i];
+      $ret .= ', "'. $resource[$i] . '"';
     }
     return $ret . '.';
   }
