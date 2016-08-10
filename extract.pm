@@ -22,7 +22,7 @@ sub run
   if ($amount eq 'list')
   {
     my $ret = 'Possible abdundencies: ';
-    $ret .= $resource[0];
+    $ret .= '"' . $resource[0] . '"';
     for (my $i = 1; $i < @resource; $i++)
     {
       $ret .= ', "'. $resource[$i] . '"';
