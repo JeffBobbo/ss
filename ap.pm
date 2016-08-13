@@ -40,6 +40,10 @@ sub run
   my $w4 = 0;
   {
     my $index = index($arg, '"');
+    if ($index == -1)
+    {
+      return help();
+    }
     $from = substr($arg, $index+1, index($arg, '"', $index+1) - $index - 1);
     $index = index($arg, '"', $index + length($from) + 2);
     $to = substr($arg, $index+1, index($arg, '"', $index+1) - $index - 1);
@@ -51,14 +55,24 @@ sub run
 
   if ($fromID == -1)
   {
-    return "Failed to find starting location, `$from`,\n";
+    return "Failed to find starting location, `$from`.";
   }
   if ($toID == -1)
   {
-    return "Failed to find destination location, `$to`.\n";
+    return "Failed to find destination location, `$to`.";
+  }
+
+  if ($fromID == $toID)
+  {
+    return 'You\'re already at your destination.';
   }
 
   my @r = @{route($fromID, $toID, $w4)};
+  if (@r == 0)
+  {
+    return "No route from `$from` to `$to` found.";
+  }
+
   my @ret;
   my $str = $from . ' to ' . $to . ' in ' . @r . ' jump' . (@r == 1 ? '' : 's') . '.';
   $str .= $map->{$r[0]}{n};
