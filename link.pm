@@ -13,7 +13,7 @@ my %links = (
   forum => 'http://forum.starsonata.com',
   wiki => 'http://wiki.starsonata.com',
   map => 'http://starsonata.com/map',
-  discord => 'https://discord.gg/0uO2ih0jVC4vLSut';
+  discord => 'https://discord.gg/0uO2ih0jVC4vLSut'
 );
 
 sub run
