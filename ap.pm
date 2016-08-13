@@ -74,7 +74,7 @@ sub run
   }
 
   my @ret;
-  my $str = $from . ' to ' . $to . ' in ' . @r . ' jump' . (@r == 1 ? '' : 's') . '.';
+  my $str = $from . ' to ' . $to . ' in ' . @r . ' jump' . (@r == 1 ? '' : 's') . '. ';
   $str .= $map->{$r[0]}{n};
   for (my $i = 0; $i < @r; $i += 20)
   {
